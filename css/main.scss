@@ -352,7 +352,8 @@ header {
 }
 
 .button {
-    display: inline-block;
+    display: inline-flex;
+    gap: var(--gap);
     padding: 12px 24px;
     background-color: var(--color-blue-500);
     color: white;
