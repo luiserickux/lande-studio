@@ -5,11 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lande Studio - Diseno UI a medida</title>
+    <title>Lande Studio - Diseño UI a medida</title>
     <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
+
+    <div class="menu-canvas">
+        <div class="container">
+            <a class="button small-semibold active" href="#">Inicio</a>
+            <a class="button small-semibold" href="#">Servicios</a>
+            <a class="button small-semibold" href="#">Sobre nosotros</a>
+            <a class="button small-semibold" href="#">Contacto</a>
+            <a class="button small-semibold" onclick="AbrirCerrarMenu()" href="#">Cerrar menú</a>
+        </div>
+    </div>
 
     <header>
         <div class="container">
@@ -21,6 +31,9 @@
                 <a href="#" class="item small-semibold">Servicios</a>
                 <a href="#" class="item small-semibold">Sobre nosotros</a>
                 <a href="#" class="item small-semibold">Contacto</a>
+                <a href="#" onclick="AbrirCerrarMenu()">
+                    <img class="menu" src="resources/svg/hamburger.svg">
+                </a>
             </div>
         </div>
     </header>
@@ -39,9 +52,6 @@
                     </a>
                 </div>
                 <div class="graph">
-                    <img class="figure figure1" src="/resources/svg/figure_banner.svg" alt="Figura para banner">
-                    <img class="figure figure2" src="/resources/svg/Dots-linear_banner.svg" alt="Figura para banner">
-                    <img class="figure figure3" src="/resources/svg/Dots-blue_banner.svg" alt="Figura para banner">
                     <img id="image-logo" src="/resources/img/Image_banner.png" alt="Logo">
                     <img class="luz luz01" src="/resources/svg/luz01.svg">
                 </div>
@@ -83,7 +93,7 @@
             <div class="container">
                 <h2>Proyectos en los que hemos colaborado</h2>
                 <div class="project">
-                    <img src="/resources/img/Boton-rosa.png" alt="Colaboramos en el Proyecto Boton Rosa">
+                    <img class="galery" src="/resources/img/Boton-rosa.png" alt="Colaboramos en el Proyecto Boton Rosa">
                     <div class="content">
                         <h4>Botón rosa (Aplicación Móvil)</h4>
                         <p class="text-regular">Aplicación para dispositivos móviles en el que una vez detecte cuando
@@ -97,7 +107,8 @@
                     </div>
                 </div>
                 <div class="project">
-                    <img src="/resources/img/Lande-learn.png" alt="Colaboramos en el Proyecto Boton Rosa">
+                    <img class="galery" src="/resources/img/Lande-learn.png"
+                        alt="Colaboramos en el Proyecto Boton Rosa">
                     <div class="content">
                         <h4>Lande Learn (Aplicación Móvil)</h4>
                         <p class="text-regular">Aplicación móvil y plataforma web de educación y formación online
@@ -120,10 +131,17 @@
                 <a href="">
                     <img class="logo" src="resources/svg/logo.svg" alt="Logo oficial de Lande Studio">
                 </a>
-                <p class="small-regular">&copy; Lande Studio 2021 - Todos los derechos reservados</p>
+                <p class="copyright" class="small-regular">&copy; Lande Studio 2021 - Todos los derechos reservados</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        function AbrirCerrarMenu() {
+            var element = document.querySelector(".menu-canvas");
+            element.classList.toggle("menu-activate");
+        }
+    </script>
 
 </body>
 
