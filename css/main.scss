@@ -277,7 +277,7 @@ a {
     background-color: rgba(18, 27, 33, 0.75);
     backdrop-filter: blur(6px);
     z-index: 2;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
 
@@ -658,7 +658,7 @@ footer {
 
 // Media queries
 
-@media screen and (max-width:1380px) {
+@media screen and (max-width:1392px) {
     .project {
         flex-direction: column;
         gap: 2.5rem;
@@ -672,12 +672,20 @@ footer {
         }
 
         img.galery {
-            width: 100%;
+            max-width: 100%;
         }
 
         &:nth-last-child(1) {
             img {
                 order: -1;
+            }
+
+            .content {
+                a {
+                    .chevron {
+                        order: 1;
+                    }
+                }
             }
         }
     }
@@ -687,6 +695,15 @@ footer {
     :root {
         --margin-body: 4rem;
         --margin-topbar: 4rem;
+    }
+
+
+    footer {
+        .container {
+            img {
+                width: 1280px;
+            }
+        }
     }
 }
 
@@ -788,6 +805,10 @@ footer {
             left: auto;
             right: -30%;
         }
+    }
+
+    .decorate01 {
+        display: none;
     }
 }
 
