@@ -103,13 +103,13 @@
     --ff-text: "Open Sans", sans-serif;
 
     // Font size
-    --fs-bigger: 3.5rem;
-    --fs-h1: 3rem;
-    --fs-h2: 2.5rem;
-    --fs-h3: 2rem;
-    --fs-h4: 1.625rem;
-    --fs-text: 1.125rem;
-    --fs-light: 1rem;
+    --fs-bigger: 3.25rem;
+    --fs-h1: 2.75rem;
+    --fs-h2: 2.375rem;
+    --fs-h3: 1.875rem;
+    --fs-h4: 1.5rem;
+    --fs-text: 1rem;
+    --fs-light: 0.938rem;
     --fs-lighter: 0.875rem;
 
     // Font weight
@@ -127,11 +127,11 @@
     /* ANCHOR Spacings */
 
     // Margins
-    --margin-body: 120px;
-    --margin-topbar: 80px;
+    --margin-body: 7.5rem;
+    --margin-topbar: 5rem;
 
     // Gap
-    --gap: 16px;
+    --gap: 1rem;
     --main-gap: 8rem;
 }
 
@@ -145,7 +145,7 @@
     letter-spacing: var(--ls-title);
 }
 
-.h1 {
+h1 {
     color: var(--color-dark-title);
     font-size: var(--fs-h1);
     font-family: var(--ff-title);
@@ -154,7 +154,7 @@
     letter-spacing: var(--ls-title);
 }
 
-.h2 {
+h2 {
     color: var(--color-dark-title);
     font-size: var(--fs-h2);
     font-family: var(--ff-title);
@@ -163,7 +163,7 @@
     letter-spacing: var(--ls-title);
 }
 
-.h3 {
+h3 {
     color: var(--color-dark-title);
     font-size: var(--fs-h3);
     font-family: var(--ff-title);
@@ -172,7 +172,7 @@
     letter-spacing: var(--ls-title);
 }
 
-.h4 {
+h4 {
     color: var(--color-dark-title);
     font-size: var(--fs-h4);
     font-family: var(--ff-title);
@@ -229,9 +229,29 @@
     line-height: var(--lh-text);
 }
 
+/* ANCHOR Sistema de diseño */
+.button {
+    display: inline-flex;
+    gap: .5rem;
+    padding: .75rem 1.5rem;
+    background-color: var(--color-blue-500);
+    color: white;
+    transition: all 150ms ease;
+
+    &:hover {
+        background-color: var(--color-blue-600);
+        transition: all 150ms ease;
+    }
+
+    &:active {
+        transform: scale(1.05);
+    }
+}
+
 /* ANCHOR Estilos de la web */
 body {
     background-color: var(--color-dark-bg);
+    overflow-x: hidden;
 }
 
 a {
@@ -240,30 +260,31 @@ a {
 
 header {
     min-width: 100vw;
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     backdrop-filter: blur(8px);
     background-color: rgba(18, 27, 33, 0.75);
-    // border: 1px solid red;
+    z-index: 1;
 
     .container {
-        min-height: 5rem;
+        min-height: 4rem;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
         margin: 0 var(--margin-topbar);
-        // border: 1px solid blue;
     }
 }
 
 .logo {
-    width: 7.5rem;
+    width: 7rem;
 }
 
 .items {
     display: flex;
-    gap: 32px;
+    gap: 2rem;
 }
 
 .item {
@@ -282,14 +303,16 @@ header {
     border-bottom: 2px solid var(--color-dark-title);
 }
 
-.main {
-    min-width: 100vw;
-    column-gap: var(--main-gap);
+main {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--main-gap);
 }
 
-.banner {
+// Banner styles
+#banner {
     display: flex;
-    min-height: 100vh;
+    min-height: calc(100vh - 5rem);
     align-items: center;
 
     .container {
@@ -300,7 +323,7 @@ header {
         justify-content: space-between;
 
         .content {
-            max-width: 600px;
+            max-width: 37.5rem;
 
             h1 {
                 margin-bottom: 1rem;
@@ -317,8 +340,9 @@ header {
 
         .graph {
             position: relative;
-            width: 408px;
-            height: 360px;
+            width: 22rem;
+            height: 15rem;
+            margin: 0 2.25rem;
 
             #image-logo {
                 height: 100%;
@@ -334,33 +358,192 @@ header {
             }
 
             .figure1 {
-                top: -48px;
-                left: -32px;
+                width: 15rem;
+                top: -12px;
+                left: -36px;
             }
 
             .figure2 {
-                bottom: 0;
-                left: 40px
+                width: 10rem;
+                bottom: -32px;
+                left: 8px
             }
 
             .figure3 {
-                right: -12px;
-                top: 16px;
+                width: 8rem;
+                right: -36px;
+                top: -12px;
             }
         }
     }
 }
 
-.button {
-    display: inline-flex;
-    gap: var(--gap);
-    padding: 12px 24px;
-    background-color: var(--color-blue-500);
-    color: white;
-    transition: all 150ms ease;
+// Cards styles
+
+#cards {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 var(--margin-body);
+        align-items: center;
+        justify-content: center;
+        gap: var(--gap);
+
+        h2 {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+    }
 }
 
-.button:hover {
-    background-color: var(--color-blue-600);
-    transition: all 150ms ease;
+.card {
+    background: none;
+    border-bottom: 4px solid transparent;
+    padding: 2rem;
+
+    img {
+        width: 15rem;
+        margin-bottom: 2rem;
+    }
+
+    h4 {
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .button {
+        border: 2px solid transparent;
+        text-align: center;
+        display: block;
+        background: none;
+        color: var(--color-dark-light);
+    }
+}
+
+.card-important {
+    background: radial-gradient(80% 90% at 50% 100%, var(--color-blue-700) 0%, rgba(3, 11, 23, 0) 100%);
+    border-top: 4px solid var(--color-blue-500);
+
+    h4 {
+        color: var(--color-blue-50);
+    }
+
+    .button {
+        background-color: var(--color-blue-500);
+        color: white;
+    }
+
+    .button:hover {
+        background: var(--color-blue-600);
+    }
+}
+
+.card-research {
+    .button:hover {
+        color: var(--color-purple-300);
+        border: 2px solid var(--color-purple-400);
+    }
+
+    &:hover {
+        background: radial-gradient(75% 90% at 50% 0%, var(--color-purple-700) 0%, rgba(28, 2, 49, 0) 100%);
+        border-bottom: 4px solid var(--color-purple-500);
+
+        h4 {
+            color: var(--color-purple-50);
+        }
+
+        .button {
+            color: var(--color-purple-300);
+        }
+    }
+}
+
+.card-ux {
+    .button:hover {
+        color: var(--color-orange-400);
+        border: 2px solid var(--color-orange-400);
+    }
+
+    &:hover {
+        background: radial-gradient(75% 90% at 50% 0%, var(--color-orange-700) 0%, rgba(165, 93, 0, 0) 100%);
+        border-bottom: 4px solid var(--color-orange-500);
+
+        h4 {
+            color: var(--color-orange-50);
+        }
+
+        .button {
+            color: var(--color-orange-300);
+        }
+    }
+}
+
+// Projects styles
+
+#projects {
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 var(--margin-body);
+        gap: 2.5rem;
+
+        h2 {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+
+    img {
+        min-width: 30rem;
+    }
+
+    .content {
+        h4 {
+            background: -webkit-linear-gradient(0deg, var(--color-purple-300) 0%, var(--color-purple-400) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 2rem;
+        }
+
+        .chevron {
+            min-width: 1.25rem;
+        }
+    }
+
+    &:nth-last-child(1) {
+        .content {
+            order: -1;
+            text-align: right;
+
+            h4 {
+                background: -webkit-linear-gradient(0deg, var(--color-blue-300) 0%, var(--color-blue-400) 100%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+}
+
+.boton-rosa {
+    background: var(--color-purple-500);
+
+    &:hover {
+        background: var(--color-purple-600);
+    }
 }
