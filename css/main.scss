@@ -697,6 +697,14 @@ footer {
         --margin-topbar: 4rem;
     }
 
+    #banner {
+        min-height: auto;
+        margin: 16rem 0 8rem;
+    }
+
+    #olas {
+        display: none;
+    }
 
     footer {
         .container {
@@ -704,12 +712,6 @@ footer {
                 width: 1280px;
             }
         }
-    }
-}
-
-@media screen and (max-width:1024px) {
-    #olas {
-        display: none;
     }
 }
 
