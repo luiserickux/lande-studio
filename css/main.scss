@@ -249,6 +249,11 @@ h4 {
 }
 
 /* ANCHOR Estilos de la web */
+.luz,
+.decorate {
+    z-index: -2;
+}
+
 body {
     background-color: var(--color-dark-bg);
     overflow-x: hidden;
@@ -263,7 +268,7 @@ header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(6px);
     background-color: rgba(18, 27, 33, 0.75);
     z-index: 1;
 
@@ -311,6 +316,7 @@ main {
 
 // Banner styles
 #banner {
+    position: relative;
     display: flex;
     min-height: calc(100vh - 5rem);
     align-items: center;
@@ -342,7 +348,7 @@ main {
             position: relative;
             width: 22rem;
             height: 15rem;
-            margin: 0 2.25rem;
+            margin: 0 2.5rem;
 
             #image-logo {
                 height: 100%;
@@ -358,29 +364,44 @@ main {
             }
 
             .figure1 {
-                width: 15rem;
-                top: -12px;
-                left: -36px;
+                width: 20rem;
+                top: -48px;
+                left: -40px;
             }
 
             .figure2 {
                 width: 10rem;
-                bottom: -32px;
-                left: 8px
+                bottom: -56px;
+                left: 16px;
             }
 
             .figure3 {
                 width: 8rem;
-                right: -36px;
-                top: -12px;
+                right: -40px;
+                top: -20px;
+            }
+
+            .luz01 {
+                position: absolute;
+                width: 50rem;
+                top: -100%;
+                left: -65%;
             }
         }
+    }
+
+    #olas {
+        min-width: 100%;
+        position: absolute;
+        bottom: -0.5rem;
     }
 }
 
 // Cards styles
 
 #cards {
+    position: relative;
+
     .container {
         display: flex;
         flex-wrap: wrap;
@@ -395,6 +416,20 @@ main {
             text-align: center;
             margin-bottom: 2.5rem;
         }
+    }
+
+    .luz02 {
+        width: 80rem;
+        position: absolute;
+        top: -60%;
+        left: -15%;
+    }
+
+    .decorate01 {
+        width: 5rem;
+        position: absolute;
+        top: -10%;
+        left: 15%;
     }
 }
 
@@ -484,6 +519,8 @@ main {
 // Projects styles
 
 #projects {
+    position: relative;
+
     .container {
         display: flex;
         flex-direction: column;
@@ -496,18 +533,38 @@ main {
             text-align: center;
         }
     }
+
+    .luz03 {
+        position: absolute;
+        top: -50%;
+        left: 30%;
+    }
+
+    .decorate02 {
+        width: 6rem;
+        position: absolute;
+        top: -20%;
+        right: 0;
+    }
 }
 
 .project {
+    position: relative;
+    align-self: center;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 5rem;
 
     img {
         min-width: 30rem;
+        height: 18rem;
+        object-fit: cover;
     }
 
     .content {
+        max-width: 35rem;
+
         h4 {
             background: -webkit-linear-gradient(0deg, var(--color-purple-300) 0%, var(--color-purple-400) 100%);
             -webkit-background-clip: text;
@@ -522,6 +579,7 @@ main {
 
         .chevron {
             min-width: 1.25rem;
+            height: auto;
         }
     }
 
@@ -538,6 +596,13 @@ main {
             }
         }
     }
+
+    .decorate03 {
+        transform: scale(.5);
+        position: absolute;
+        top: -25%;
+        left: -25%;
+    }
 }
 
 .boton-rosa {
@@ -545,5 +610,29 @@ main {
 
     &:hover {
         background: var(--color-purple-600);
+    }
+}
+
+// Footer styles
+
+footer {
+    margin-top: 8rem;
+
+    .container {
+        img {
+            width: 100%;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 var(--margin-topbar);
+            min-height: 4rem;
+
+            .logo {
+                width: 7rem;
+            }
+        }
     }
 }
