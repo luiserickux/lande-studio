@@ -265,7 +265,7 @@ html {
 
 body {
     background-color: var(--color-dark-bg);
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 a {
@@ -575,7 +575,6 @@ main {
 }
 
 .project {
-    width: 100%;
     align-self: center;
     display: flex;
     flex-wrap: wrap;
