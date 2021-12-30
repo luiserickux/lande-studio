@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lande Studio - Diseño UI a medida</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/jpg" href="/resources/img/favicon.png" />
     <link rel="stylesheet" href="/css/main.css">
 </head>
@@ -43,16 +44,17 @@
         <section id="banner">
             <img id="olas" src="/resources/svg/Olas.svg">
             <div class="container">
-                <div class="content">
+                <div class="content" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
                     <h1>Ofrecemos soluciones de Diseño UX/UI</h1>
                     <p class="text-regular">Diseña tu sitio web o aplicación con personal ampliamente capacitado,
                         proyectate en internet con un concepto sólido y atrae a un mayor numero de usuarios satisfechos.
                     </p>
-                    <a href="https://www.facebook.com/landestudiomx" target="_blank" class="button small-semibold">Cotiza tu diseño
+                    <a href="https://www.facebook.com/landestudiomx" target="_blank"
+                        class="button small-semibold">Cotiza tu diseño
                         <img src="/resources/svg/Icon_chevron.svg" alt="Icon">
                     </a>
                 </div>
-                <div class="graph">
+                <div class="graph" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000">
                     <img id="image-logo" src="/resources/img/Image_banner.png" alt="Logo">
                     <img class="luz luz01" src="/resources/svg/luz01.svg">
                 </div>
@@ -64,25 +66,28 @@
             <img class="decorate decorate01" src="/resources/svg/decorativo1.svg">
             <div class="container">
                 <h2>Algunos de nuestros servicios</h2>
-                <div class="card card-research">
+                <div class="card card-research" data-aos="fade-right" data-aos-delay="150" data-aos-duration="500">
                     <img src="/resources/svg/Graph_ux-research.svg"
                         alt="Cotiza un servicios de investigación de problematicas en usuarios reales">
                     <h4>UX Research</h4>
-                    <a href="https://www.facebook.com/landestudiomx" target="_blank" class="button small-semibold">Quiero mas información
+                    <a href="https://www.facebook.com/landestudiomx" target="_blank"
+                        class="button small-semibold">Quiero mas información
                     </a>
                 </div>
-                <div class="card card-important">
+                <div class="card card-important" data-aos="fade-up" data-aos-delay="150" data-aos-duration="500">
                     <img src="/resources/svg/Graph_ui.svg"
                         alt="Cotiza un servicios de investigación de problematicas en usuarios reales">
                     <h4>Diseño UI</h4>
-                    <a href="https://www.facebook.com/landestudiomx" target="_blank" class="button small-semibold">Quiero mas información
+                    <a href="https://www.facebook.com/landestudiomx" target="_blank"
+                        class="button small-semibold">Quiero mas información
                     </a>
                 </div>
-                <div class="card card-ux">
+                <div class="card card-ux" data-aos="fade-left" data-aos-delay="150" data-aos-duration="500">
                     <img src="/resources/svg/Graph_ux.svg"
                         alt="Cotiza un servicios de investigación de problematicas en usuarios reales">
                     <h4>Diseño UX</h4>
-                    <a href="https://www.facebook.com/landestudiomx" target="_blank" class="button small-semibold">Quiero mas información
+                    <a href="https://www.facebook.com/landestudiomx" target="_blank"
+                        class="button small-semibold">Quiero mas información
                     </a>
                 </div>
             </div>
@@ -93,7 +98,8 @@
             <img class="decorate decorate02" src="/resources/svg/decorativo2.svg" alt="">
             <div class="container">
                 <h2>Proyectos en los que hemos colaborado</h2>
-                <div class="project">
+                <div class="project" data-aos="fade-right" data-aos-delay="150" data-aos-duration="500"
+                    data-aos-anchor-placement="bottom-bottom">
                     <img class="galery" src="/resources/img/Boton-rosa.png" alt="Colaboramos en el Proyecto Boton Rosa">
                     <div class="content">
                         <h4>Botón rosa (Aplicación Móvil)</h4>
@@ -107,7 +113,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="project">
+                <div class="project" data-aos="fade-left" data-aos-delay="650" data-aos-duration="500">
                     <img class="galery" src="/resources/img/Lande-learn.png"
                         alt="Colaboramos en el Proyecto Boton Rosa">
                     <div class="content">
@@ -137,11 +143,14 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         function AbrirCerrarMenu() {
             var element = document.querySelector(".menu-canvas");
             element.classList.toggle("menu-activate");
         }
+
+        AOS.init();
     </script>
 
 </body>
